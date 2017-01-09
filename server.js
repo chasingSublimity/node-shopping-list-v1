@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 
 const express = require('express');
 const router = express.Router();
@@ -14,9 +15,9 @@ app.use(morgan('common'));
 
 // we're going to add some items to ShoppingList
 // so there's some data to look at
-ShoppingList.create('beans', 2);
-ShoppingList.create('tomatoes', 3);
-ShoppingList.create('peppers', 4);
+Recipe.create('chocolateMilk', ['chocolate', 'milk']);
+Recipe.create('ceral', ['ceral', 'milk']);
+Recipe.create('pizza', ['cell phone', 'takeout menu']);
 
 // when the root of this router is called with GET, return
 // all current ShoppingList items
