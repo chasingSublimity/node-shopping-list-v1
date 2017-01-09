@@ -20,9 +20,9 @@ ShoppingList.create('beans', 2);
 ShoppingList.create('tomatoes', 3);
 ShoppingList.create('peppers', 4);
 
-Recipe.create('chocolateMilk', ['chocolate', 'milk']);
-Recipe.create('ceral', ['ceral', 'milk']);
-Recipe.create('pizza', ['cell phone', 'takeout menu']);
+Recipes.create('chocolateMilk', ['chocolate', 'milk']);
+Recipes.create('ceral', ['ceral', 'milk']);
+Recipes.create('pizza', ['cell phone', 'takeout menu']);
 
 // when the root of this router is called with GET, return
 // all current ShoppingList items
@@ -30,8 +30,8 @@ app.get('/shopping-list', (req, res) => {
   res.json(ShoppingList.get());
 });
 
-app.get('/recipe', (req, res) => {
-  res.json(Recipe.get());
+app.get('/recipes', (req, res) => {
+  res.json(Recipes.get());
 });
 
 app.listen(process.env.PORT || 8080, () => {
